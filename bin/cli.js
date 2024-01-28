@@ -32,8 +32,8 @@ async function main() {
     .option('-t, --timeout <timeout>', 'Timeout in milliseconds')
     .option('-k, --apiKey <apiKey>', 'OpenAI API key')
     .option('-o, --apiOrg <apiOrg>', 'OpenAI API key')
-    .option('-m, --model <model>', 'Model (gpt-3.5-turbo, gpt-4)', {
-      default: 'gpt-3.5-turbo'
+    .option('-m, --model <model>', 'Model (gpt-3.5-turbo, gpt-4, gpt-4-1106-preview)', {
+      default: 'gpt-4-1106-preview'
     })
     .option(
       '-n, --conversationName <conversationName>',

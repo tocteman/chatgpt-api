@@ -8,7 +8,7 @@ import * as types from './types'
 import { fetch as globalFetch } from './fetch'
 import { fetchSSE } from './fetch-sse'
 
-const CHATGPT_MODEL = 'gpt-3.5-turbo'
+const CHATGPT_MODEL = 'gpt-4-1106-preview'
 
 const USER_LABEL_DEFAULT = 'User'
 const ASSISTANT_LABEL_DEFAULT = 'ChatGPT'
@@ -82,7 +82,7 @@ export class ChatGPTAPI {
 
     if (this._systemMessage === undefined) {
       const currentDate = new Date().toISOString().split('T')[0]
-      this._systemMessage = `You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible.\nKnowledge cutoff: 2021-09-01\nCurrent date: ${currentDate}`
+      this._systemMessage = `You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible.\nCurrent date: ${currentDate}`
     }
 
     this._maxModelTokens = maxModelTokens
